@@ -24,9 +24,10 @@
                             <select name="city" class="form-control" id="citySearchBox">
 
                                 <option  value="all" selected> All </option>
+
                                 @foreach( \App\City::distinct('name')->get() as $city )
 
-                                    <option  value="{{ $city->name }}" selected> {{ $city->name }} </option>
+                                    <option @if(isset($_GET['$city']) && $_GET['$city'] == $city->name) selected @endif value="{{ $city->name }}" > {{ $city->name }} </option>
 
                                 @endforeach
 

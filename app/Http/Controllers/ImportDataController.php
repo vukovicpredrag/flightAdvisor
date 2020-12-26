@@ -71,7 +71,7 @@ class ImportDataController extends Controller
 
             //Store all routes to local json file
             $flightFinder = new FlightFinder();
-            $routes = Route::select(['*', DB::raw(('MIN(price) as min_price'))])->groupBy('source_airport_id', 'destination_airport_id' ) -> get();
+            $routes = Route::select(['*', \DB::raw(('MIN(price) as min_price'))])->groupBy('source_airport_id', 'destination_airport_id' ) -> get();
             if($routes && $flightFinder) {
 
                 foreach ($routes as $route) {
@@ -79,7 +79,7 @@ class ImportDataController extends Controller
                 }
 
             $routesJson = json_encode( $flightFinder -> allNodes(), 1 );
-            $file = storage_path('app/json/routes.json');
+            $file = public_path('json/routes.json');
             file_put_contents( $file, $routesJson );
 
             }

@@ -4,6 +4,11 @@ namespace App\Helper;
 use App\Route;
 
 
+/**
+ * Founding the cheapest flight between cities
+ */
+
+
 class FlightFinder {
 
 
@@ -63,7 +68,7 @@ class FlightFinder {
         $proprity->add(array($dist[$from], $from));
 
         //Include json route file
-        $fileName = storage_path('app/json/routes.json');
+        $fileName = public_path('json/routes.json');
         $file = file_get_contents( $fileName );
         $nodes = json_decode( $file, true );
 
@@ -129,7 +134,7 @@ class FlightFinder {
                              ->groupBy(['source_airport_id', 'destination_airport_id'])
                              ->min('price');
 
-            $finalArr[] = Route::where('source_airport_id', $value)->where('destination_airport_id', $key)->where('price', $minPrice)->first()->id;
+            $finalArr[] = Route::where('source_airport_id', $value)->where('destination_airport_id', $key)->where('price', $minPrice)->first('id')->id;
 
         }
 

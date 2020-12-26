@@ -25,6 +25,7 @@ class FlightController extends Controller
 
     }
 
+
     public function findFlight(Request $request)
     {
 
@@ -37,6 +38,7 @@ class FlightController extends Controller
         if(!$airportFrom || !$airportTo){
 
             $noFlight = 1;
+
             return view('user.flight.index',  compact('airportFrom', 'airportTo', 'noFlight' ));
 
         }
@@ -93,6 +95,7 @@ class FlightController extends Controller
         }else{
 
                 $noFlight = 1;
+
                 return view('user.flight.index',  compact('airportFrom', 'airportTo', 'noFlight' ));
 
         }
@@ -100,7 +103,7 @@ class FlightController extends Controller
 
         foreach ($cheapestRoutes as $route){
 
-            $prices[] = $route->price;
+            $prices[]   = $route->price;
             $distance[] = $route->distance($route->sourceAirport->latitude, $route->sourceAirport->lognitude, $route->destinationAirport->latitude, $route->destinationAirport->lognitude);
         }
 

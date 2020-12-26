@@ -122,7 +122,7 @@
 
                                 <div class="card" style="margin-left: 20px">
 
-                                    <div class="card-body" style="text-align: center">
+                                    <div class="card-body" style="text-align: center"><br>
 
                                         <i class="fa fa-check-circle fa-2x" aria-hidden="true" style="color:green;"></i><br><br>
                                         <p>TOTAL PRICE: <b> {{ $priceSum }} </b></p> <hr>

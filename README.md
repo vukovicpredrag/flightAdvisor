@@ -1,28 +1,60 @@
 # Flight Advisor
 
+Service for founding the cheapest flight between cities.
+
+Cites CRUD (Admin create cities, users can read, write, edit or delete city comments)
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+ Install Composer Dependencies
 
 ```bash
-pip install foobar
+composer install
 ```
+
+Install NPM Dependencies
+
+```bash
+npm install
+```
+
+Create a copy of your .env file
+
+```bash
+cp .env.example .env
+```
+*import database and set DB_DATABASE='db_name' in .env
+
+ Generate an app encryption key
+
+```bash
+php artisan key:generate
+```
+Configuration Caching
+```bash
+php artisan config:cache
+```
+
 
 ## Usage
+There are two types of the users: administrator and regular user.
 
-```python
-import foobar
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+Administrator is able to:
+
+```
+● Add cities.
+● Import the data for the airports and routes 
 ```
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Regular user is able to:
+```
+● Get all the cities
+● Search for cities by name
+● Add a comment for the city.
+● Delete a comment.
+● Update a comment.
+● Fiding cheapest flights from city A to B. 
+```
 
-Please make sure to update tests as appropriate.
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)

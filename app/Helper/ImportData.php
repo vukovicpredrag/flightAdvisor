@@ -23,7 +23,7 @@ class ImportData
 
         set_time_limit(0);
 
-        $path =  storage_path('app/files/'.$fileName);
+        $path = storage_path('app/files/'.$fileName);
 
         $file = new \SplFileObject( $path );
 

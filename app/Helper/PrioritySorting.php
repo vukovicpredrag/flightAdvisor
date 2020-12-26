@@ -37,7 +37,7 @@ class PrioritySorting {
 
             while($node) {
 
-                if (compareRoute($newnode, $node) < 0) {
+                if ($this->compareRoute($newnode, $node) < 0) {
                     //Higher priority
                     $newnode->next = $node;
                     if ($lastnode == null) {
@@ -68,19 +68,19 @@ class PrioritySorting {
 
     }
 
-    function size() {
+    public function size() {
 
         return $this->size;
 
     }
 
-    function peak() {
+    public function peak() {
 
         return $this->liststart->data;
 
     }
 
-    function remove() {
+    public function remove() {
 
         $x = $this->peak();
         $this->size = $this->size - 1;
@@ -99,5 +99,12 @@ class PrioritySorting {
         return (object) $arr;
 
     }
+
+    public function compareRoute($a, $b) {
+
+        return $a->data[0] - $b->data[0];
+
+    }
+
 
 }

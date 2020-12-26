@@ -2,18 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30c0d7a4-aeab-4c15-b74a-e6f9dcbeb670" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/OmniTester.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/OmniTester.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Helper/FlightFinder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helper/FlightFinder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Helper/ImportData.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helper/ImportData.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Helper/PrioritySorting.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helper/PrioritySorting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FlightController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FlightController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ImportDataController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ImportDataController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/flight/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/flight/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/cities/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/cities/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +177,7 @@
       <workItem from="1608805968267" duration="39124000" />
       <workItem from="1608886884859" duration="35853000" />
       <workItem from="1608942335683" duration="3632000" />
-      <workItem from="1608975679944" duration="588000" />
+      <workItem from="1608975679944" duration="4783000" />
     </task>
     <servers />
   </component>
@@ -195,10 +189,11 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2610" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1608976056996" />
-    <state x="2660" y="276" key="FileChooserDialogImpl" timestamp="1608942909508">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1608983316860">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="2660" y="276" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1608942909508" />
+    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1608983316860" />
+    <state x="2660" y="276" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1608977005906" />
     <state x="2381" y="163" key="SettingsEditor" timestamp="1608945264708">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -207,9 +202,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2012" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1608923022086" />
-    <state x="2576" y="252" width="607" height="536" key="find.popup" timestamp="1608976263171">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="656" y="252" width="607" height="536" key="find.popup" timestamp="1608985252826">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="656" y="252" width="607" height="536" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1608985252826" />
     <state x="2576" y="252" width="607" height="536" key="find.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1608976263171" />
     <state x="2536" y="240" key="run.anything.popup" timestamp="1608901132747">
       <screen x="1920" y="0" width="1920" height="1040" />

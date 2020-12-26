@@ -55,35 +55,34 @@
 
                     </div>
 
-                </div>
-                <div class="card">
+            </div>
+            <div class="card">
 
-                    <div class="card-body">
+                <div class="card-body">
 
-                        <h2>Import Data</h2>
-                        <form action="{{ route( "import.data" ) }}" method="POST" enctype="multipart/form-data" id="importData">
-                            {{ csrf_field() }}
+                    <h2>Import Data</h2>
+                    <form action="{{ route( "import.data" ) }}" method="POST" enctype="multipart/form-data" id="importData">
+                        {{ csrf_field() }}
 
-                            <div class="row">
+                        <div class="row">
 
-                                <div class="col-md-3">
-                                    <label for="airports">Impor Airports:</label><br>
-                                    <input type="file" name="airports" id="airports">
-                                </div>
+                            <div class="col-md-3">
+                                <label for="airports">Impor Airports:</label><br>
+                                <input type="file" name="airports" id="airports">
+                            </div>
 
-                                <div class="col-md-3">
-                                    <label for="routes">Impor Routes:</label>
-                                    <input type="file" name="routes" id="routes">
-                                </div>
+                            <div class="col-md-3">
+                                <label for="routes">Impor Routes:</label>
+                                <input type="file" name="routes" id="routes">
+                            </div>
 
-                            </div><br>
+                        </div><br>
 
-                            <button type="submit" class="btn btn-primary" id="importDataButton">Import Data</button>
+                        <button type="submit" class="btn btn-primary" id="importDataButton">Import Data</button>
 
+                    </form>
 
-                        </form>
-
-                     </div>
+                 </div>
 
             </div>
 
@@ -92,8 +91,8 @@
     </div>
 
 </div>
-<div id="overlay"></div>
-<div id="loader"></div>
+
+
 
 
 

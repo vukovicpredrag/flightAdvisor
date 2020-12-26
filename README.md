@@ -2,7 +2,6 @@
 
 Service for founding the cheapest flight between cities.
 
-Cites CRUD (Admin create cities, users can read, write, edit or delete city comments)
 
 ## Installation
 
@@ -44,7 +43,8 @@ Administrator is able to:
 
 ```
 ● Add cities.
-● Import the data for the airports and routes 
+● Import data for the airports and routes 
+*required for flight finder functionality
 ```
 
 Regular user is able to:
@@ -56,5 +56,8 @@ Regular user is able to:
 ● Update a comment.
 ● Fiding cheapest flights from city A to B. 
 ```
+
+## Local url path
+http://localhost/flightAdvisor/public/login
 
 

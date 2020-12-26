@@ -131,8 +131,8 @@ class FlightFinder {
         foreach ($reversed as $key => $value ){
 
             $minPrice = Route::where('source_airport_id', $value) ->where('destination_airport_id', $key)
-                             ->groupBy(['source_airport_id', 'destination_airport_id'])
-                             ->min('price');
+                ->groupBy(['source_airport_id', 'destination_airport_id'])
+                ->min('price');
 
             $finalArr[] = Route::where('source_airport_id', $value)->where('destination_airport_id', $key)->where('price', $minPrice)->first('id')->id;
 
@@ -149,12 +149,10 @@ class FlightFinder {
 
     }
 
-}
-
-function compareRoute($a, $b) {
-
-    return $a->data[0] - $b->data[0];
 
 }
+
+
+
 
 

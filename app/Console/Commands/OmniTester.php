@@ -38,7 +38,7 @@ class OmniTester extends Command
     public function handle()
     {
 
-        //testing
+      //testing
 
     }
 }

@@ -16,6 +16,7 @@ class CityController extends Controller
 
     }
 
+
     public function index( Request $request )
     {
 
@@ -24,6 +25,7 @@ class CityController extends Controller
         return view( 'user.cities.index', compact( 'cities'));
 
     }
+
 
     public function addCity( Request $request )
     {
@@ -41,6 +43,7 @@ class CityController extends Controller
         return redirect('/')->with('status', 'The city is successfully added.');
 
     }
+
 
     public function getList(Request $request)
     {
@@ -72,6 +75,7 @@ class CityController extends Controller
         return json_encode($data);
 
     }
+
 
     public function search(Request $request)
     {

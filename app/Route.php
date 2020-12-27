@@ -15,11 +15,13 @@ class Route extends Model
 
     }
 
+
     public function destinationAirport(){
 
         return $this->belongsTo(Airport::class, 'destination_airport_id', 'airport_id');
 
     }
+
 
     //Distance calculator
     public function distance($lat1, $lon1, $lat2, $lon2) {

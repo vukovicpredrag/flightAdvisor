@@ -18,6 +18,7 @@ class FlightController extends Controller
 
     }
 
+
     public function index()
     {
 
@@ -43,7 +44,7 @@ class FlightController extends Controller
 
         }
 
-        //Get all airports from same city
+        //Get all airports from the same city
         $startCityAirports = Airport::where('city', $airportFrom -> city)->where('country', $airportFrom->country)->pluck('airport_id');
         $finalCityAirports = Airport::where('city', $airportTo -> city)->where('country', $airportTo->country)->pluck('airport_id');
 
@@ -83,20 +84,18 @@ class FlightController extends Controller
             }
 
             $cheapestRoutes[array_sum($price)] = $routes;
+
         }
 
-
         ksort($cheapestRoutes);
-
         if (count($cheapestRoutes)) {
 
-                $cheapestRoutes = array_values($cheapestRoutes)[0];
+            $cheapestRoutes = array_values($cheapestRoutes)[0];
 
         }else{
 
-                $noFlight = 1;
-
-                return view('user.flight.index',  compact('airportFrom', 'airportTo', 'noFlight' ));
+            $noFlight = 1;
+            return view('user.flight.index',  compact('airportFrom', 'airportTo', 'noFlight' ));
 
         }
 
@@ -105,6 +104,7 @@ class FlightController extends Controller
 
             $prices[]   = $route->price;
             $distance[] = $route->distance($route->sourceAirport->latitude, $route->sourceAirport->lognitude, $route->destinationAirport->latitude, $route->destinationAirport->lognitude);
+
         }
 
         $priceSum    = array_sum($prices);
@@ -115,5 +115,6 @@ class FlightController extends Controller
 
 
     }
+
 
 }

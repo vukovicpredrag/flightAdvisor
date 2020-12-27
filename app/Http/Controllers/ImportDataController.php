@@ -7,12 +7,12 @@ use App\Route;
 use Illuminate\Http\Request;
 use App\Helper\ImportData;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\DB;
 
 
 
 class ImportDataController extends Controller
 {
+
 
     public function __construct()
     {
@@ -20,6 +20,7 @@ class ImportDataController extends Controller
         $this -> middleware( 'auth' );
 
     }
+
 
     static public function importData( Request $request )
     {
@@ -58,6 +59,7 @@ class ImportDataController extends Controller
 
         }
 
+
         if( $request->file('routes') ) {
 
             $file = $request->file('routes');
@@ -69,13 +71,13 @@ class ImportDataController extends Controller
             ImportData::import($fileName, 'routes');
 
 
-            //Store all routes to local json file
+            //Save all routes to local json file
             $flightFinder = new FlightFinder();
             $routes = Route::select(['*', \DB::raw(('MIN(price) as min_price'))])->groupBy('source_airport_id', 'destination_airport_id' ) -> get();
             if($routes && $flightFinder) {
 
                 foreach ($routes as $route) {
-                    $flightFinder->addedge($route->source_airport_id, $route->destination_airport_id, $route->min_price, $route->id);
+                    $flightFinder->addedge($route->source_airport_id, $route->destination_airport_id, $route->min_price);
                 }
 
             $routesJson = json_encode( $flightFinder -> allNodes(), 1 );
@@ -86,9 +88,9 @@ class ImportDataController extends Controller
 
         }
 
-
         return redirect('/' )->with('status', 'File are successfully imported.');
 
 
     }
+
 }

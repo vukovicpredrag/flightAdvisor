@@ -4,9 +4,6 @@ namespace App\Helper;
 
 use App\Airport;
 use App\Route;
-use Illuminate\Support\Facades\Storage;
-
-
 
 
 /**
@@ -14,9 +11,9 @@ use Illuminate\Support\Facades\Storage;
  * required txt file
  */
 
-
 class ImportData
 {
+
 
     static public function import($fileName, $type= 0)
     {
@@ -79,7 +76,7 @@ class ImportData
             //Import routes
             if($type == 'routes') {
 
-                if (isset($data[2]) && $data[2] != '') {  //  Check if city exists
+                if ( isset($data[3]) && $data[3] != 0 && isset($data[5])&& $data[5] != 0 ){  //  Check if airports exits
 
                     Route::create([
 

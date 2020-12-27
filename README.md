@@ -2,6 +2,10 @@
 
 Service for founding the cheapest flight between cities.
 
+## Technologies
+- Programing language: PHP | *requred(7.2.5)
+- Framework: Laravel 7.29 
+
 
 ## Installation
 
